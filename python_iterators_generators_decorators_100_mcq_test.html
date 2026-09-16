@@ -1,0 +1,633 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Python 100 MCQ Test</title><style>
+*{box-sizing:border-box} body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f5f7fb;color:#172033}
+header{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);border-bottom:1px solid #dce4ef;padding:13px 4vw;display:flex;gap:18px;align-items:center;justify-content:space-between}
+.brand{font-weight:800;font-size:20px} .progress{height:8px;background:#e2e8f0;flex:1;max-width:520px;border-radius:10px;overflow:hidden} #bar{height:100%;width:1%;background:#2563eb}
+main{max-width:980px;margin:auto;padding:28px 20px 110px} .intro,.qcard,.result{background:#fff;border:1px solid #dde5f0;border-radius:22px;padding:28px;box-shadow:0 10px 30px #18243a0d}
+.intro h1{font-size:42px;margin:5px 0} .intro p{font-size:19px;line-height:1.55} .pill{display:inline-block;background:#e8efff;color:#1d4ed8;padding:7px 11px;border-radius:999px;font-weight:700}
+.qcard{display:none} .qcard.active{display:block} .qtop{display:flex;justify-content:space-between;color:#617086;font-weight:700} h2{font-size:28px;line-height:1.35;margin:22px 0}
+.options{display:grid;gap:12px} .opt{border:2px solid #e1e7f0;border-radius:15px;padding:16px;cursor:pointer;font-size:18px;display:flex;gap:10px;align-items:flex-start} .opt:hover{border-color:#9db7ee;background:#f8faff} .opt input{margin-top:5px;transform:scale(1.2)}
+.feedback{margin-top:18px;font-weight:800;font-size:18px} .explain{display:none;margin-top:12px;padding:14px;border-radius:12px;background:#f1f5f9;line-height:1.5} .correct{color:#047857} .wrong{color:#b91c1c}
+footer{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #dce4ef;padding:13px;display:flex;justify-content:center;gap:12px;z-index:6}
+button{border:0;border-radius:11px;padding:11px 20px;font-size:16px;font-weight:800;cursor:pointer;background:#e8eef8;color:#172033} button.primary{background:#1d4ed8;color:#fff} button:disabled{opacity:.45}
+.result{display:none;text-align:center} .score{font-size:64px;font-weight:900;color:#1d4ed8} .breakdown{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0} .box{background:#f1f5f9;padding:16px;border-radius:14px}
+@media(max-width:650px){.intro h1{font-size:31px}h2{font-size:23px}.breakdown{grid-template-columns:1fr}header .progress{display:none}}
+</style></head><body>
+<header><div class="brand">Python Advanced Concepts Test</div><div class="progress"><div id="bar"></div></div><div id="headCount">Ready</div></header>
+<main>
+<section class="intro" id="intro"><span class="pill">100 MCQs • English</span><h1>Iterators • Generators • Decorators</h1>
+<p>Test contains concept, output-based, debugging and business-use questions. Correct options are mixed across A/B/C/D.</p>
+<p><b>Sections:</b> 34 Iterator + 33 Generator + 33 Decorator questions.</p><button class="primary" onclick="start()">Start Test</button></section>
+<section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 1 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which function creates an iterator from a list?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q1" value="0"><span><b>A.</b> yield()</span></label><label class="opt"><input type="radio" name="q1" value="1"><span><b>B.</b> next()</span></label><label class="opt"><input type="radio" name="q1" value="2"><span><b>C.</b> range()</span></label><label class="opt"><input type="radio" name="q1" value="3"><span><b>D.</b> iter()</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> iter() returns an iterator for an iterable.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 2 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which function gets the next item from an iterator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q2" value="0"><span><b>A.</b> type()</span></label><label class="opt"><input type="radio" name="q2" value="1"><span><b>B.</b> len()</span></label><label class="opt"><input type="radio" name="q2" value="2"><span><b>C.</b> iter()</span></label><label class="opt"><input type="radio" name="q2" value="3"><span><b>D.</b> next()</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> next() asks the iterator for its next value.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 3 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What exception is raised when an iterator has no more items?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q3" value="0"><span><b>A.</b> IndexError</span></label><label class="opt"><input type="radio" name="q3" value="1"><span><b>B.</b> KeyError</span></label><label class="opt"><input type="radio" name="q3" value="2"><span><b>C.</b> StopIteration</span></label><label class="opt"><input type="radio" name="q3" value="3"><span><b>D.</b> ValueError</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Iterator exhaustion is signaled by StopIteration.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 4 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which method must a custom iterator use to return the next value?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q4" value="0"><span><b>A.</b> __len__()</span></label><label class="opt"><input type="radio" name="q4" value="1"><span><b>B.</b> __str__()</span></label><label class="opt"><input type="radio" name="q4" value="2"><span><b>C.</b> __next__()</span></label><label class="opt"><input type="radio" name="q4" value="3"><span><b>D.</b> __add__()</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> __next__() implements the next-item behavior.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 5 / 100</span><span class="topic">Iterator</span></div>
+      <h2>A Python list is best described as:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q5" value="0"><span><b>A.</b> An iterable</span></label><label class="opt"><input type="radio" name="q5" value="1"><span><b>B.</b> A decorator</span></label><label class="opt"><input type="radio" name="q5" value="2"><span><b>C.</b> A generator function</span></label><label class="opt"><input type="radio" name="q5" value="3"><span><b>D.</b> Only an iterator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A list is iterable; iter(list) creates its iterator.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 6 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What does iter([10,20]) return?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q6" value="0"><span><b>A.</b> Iterator object</span></label><label class="opt"><input type="radio" name="q6" value="1"><span><b>B.</b> String</span></label><label class="opt"><input type="radio" name="q6" value="2"><span><b>C.</b> Boolean</span></label><label class="opt"><input type="radio" name="q6" value="3"><span><b>D.</b> Integer</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> iter() creates an iterator object.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 7 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What does an iterator remember?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q7" value="0"><span><b>A.</b> CPU speed</span></label><label class="opt"><input type="radio" name="q7" value="1"><span><b>B.</b> Current traversal position</span></label><label class="opt"><input type="radio" name="q7" value="2"><span><b>C.</b> Only data type</span></label><label class="opt"><input type="radio" name="q7" value="3"><span><b>D.</b> File name</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It maintains traversal state.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 8 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which loop normally handles StopIteration automatically?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q8" value="0"><span><b>A.</b> while only</span></label><label class="opt"><input type="radio" name="q8" value="1"><span><b>B.</b> match</span></label><label class="opt"><input type="radio" name="q8" value="2"><span><b>C.</b> if</span></label><label class="opt"><input type="radio" name="q8" value="3"><span><b>D.</b> for</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A for loop consumes an iterator and stops automatically.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 9 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What is the first output? x=iter([5,6]); print(next(x))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q9" value="0"><span><b>A.</b> 5</span></label><label class="opt"><input type="radio" name="q9" value="1"><span><b>B.</b> [5,6]</span></label><label class="opt"><input type="radio" name="q9" value="2"><span><b>C.</b> 6</span></label><label class="opt"><input type="radio" name="q9" value="3"><span><b>D.</b> Error</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first next() returns the first element.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 10 / 100</span><span class="topic">Iterator</span></div>
+      <h2>After two next() calls on iter([1,2]), another next() causes:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q10" value="0"><span><b>A.</b> StopIteration</span></label><label class="opt"><input type="radio" name="q10" value="1"><span><b>B.</b> 1</span></label><label class="opt"><input type="radio" name="q10" value="2"><span><b>C.</b> 0</span></label><label class="opt"><input type="radio" name="q10" value="3"><span><b>D.</b> None</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> There are no items left.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 11 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which pair defines the iterator protocol for a custom iterator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q11" value="0"><span><b>A.</b> __len__ and __getitem__</span></label><label class="opt"><input type="radio" name="q11" value="1"><span><b>B.</b> __iter__ and __next__</span></label><label class="opt"><input type="radio" name="q11" value="2"><span><b>C.</b> __call__ and __repr__</span></label><label class="opt"><input type="radio" name="q11" value="3"><span><b>D.</b> __init__ and __str__</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Custom iterators normally implement __iter__ and __next__.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 12 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What should __iter__ usually return in an iterator object?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q12" value="0"><span><b>A.</b> A string</span></label><label class="opt"><input type="radio" name="q12" value="1"><span><b>B.</b> 0</span></label><label class="opt"><input type="radio" name="q12" value="2"><span><b>C.</b> None</span></label><label class="opt"><input type="radio" name="q12" value="3"><span><b>D.</b> self</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> An iterator&#x27;s __iter__ normally returns itself.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 13 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Why can iterators help with large sequential data?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q13" value="0"><span><b>A.</b> They convert data to SQL</span></label><label class="opt"><input type="radio" name="q13" value="1"><span><b>B.</b> They support one-at-a-time traversal</span></label><label class="opt"><input type="radio" name="q13" value="2"><span><b>C.</b> They always copy all data</span></label><label class="opt"><input type="radio" name="q13" value="3"><span><b>D.</b> They delete data</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Sequential consumption can avoid needing a separate full result.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 14 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which is a good iterator use case?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q14" value="0"><span><b>A.</b> Creating database schema only</span></label><label class="opt"><input type="radio" name="q14" value="1"><span><b>B.</b> Compiling Java</span></label><label class="opt"><input type="radio" name="q14" value="2"><span><b>C.</b> Changing CSS</span></label><label class="opt"><input type="radio" name="q14" value="3"><span><b>D.</b> Reading records sequentially</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Iterators suit sequential data traversal.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 15 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What happens to iterator position after next()?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q15" value="0"><span><b>A.</b> It normally advances</span></label><label class="opt"><input type="radio" name="q15" value="1"><span><b>B.</b> It resets</span></label><label class="opt"><input type="radio" name="q15" value="2"><span><b>C.</b> Python closes</span></label><label class="opt"><input type="radio" name="q15" value="3"><span><b>D.</b> It becomes None</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The iterator advances its state.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 16 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Can a string be iterated in Python?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q16" value="0"><span><b>A.</b> Only in Java</span></label><label class="opt"><input type="radio" name="q16" value="1"><span><b>B.</b> Yes</span></label><label class="opt"><input type="radio" name="q16" value="2"><span><b>C.</b> Only with pandas</span></label><label class="opt"><input type="radio" name="q16" value="3"><span><b>D.</b> No</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Strings are iterable.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 17 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which expression creates an iterator over a tuple t?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q17" value="0"><span><b>A.</b> iter(t)</span></label><label class="opt"><input type="radio" name="q17" value="1"><span><b>B.</b> @t</span></label><label class="opt"><input type="radio" name="q17" value="2"><span><b>C.</b> yield t</span></label><label class="opt"><input type="radio" name="q17" value="3"><span><b>D.</b> next(t)</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> iter(t) creates the tuple iterator.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 18 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What is output? it=iter(&#x27;AB&#x27;); print(next(it))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q18" value="0"><span><b>A.</b> A</span></label><label class="opt"><input type="radio" name="q18" value="1"><span><b>B.</b> Error</span></label><label class="opt"><input type="radio" name="q18" value="2"><span><b>C.</b> AB</span></label><label class="opt"><input type="radio" name="q18" value="3"><span><b>D.</b> B</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first character is returned.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 19 / 100</span><span class="topic">Iterator</span></div>
+      <h2>An iterator returns values:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q19" value="0"><span><b>A.</b> Only from files</span></label><label class="opt"><input type="radio" name="q19" value="1"><span><b>B.</b> Only as dictionaries</span></label><label class="opt"><input type="radio" name="q19" value="2"><span><b>C.</b> Only all at once</span></label><label class="opt"><input type="radio" name="q19" value="3"><span><b>D.</b> One at a time</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Its key idea is next-item traversal.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 20 / 100</span><span class="topic">Iterator</span></div>
+      <h2>If you manually call next(), what should you be aware of?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q20" value="0"><span><b>A.</b> StopIteration</span></label><label class="opt"><input type="radio" name="q20" value="1"><span><b>B.</b> SyntaxError always</span></label><label class="opt"><input type="radio" name="q20" value="2"><span><b>C.</b> Decorator order</span></label><label class="opt"><input type="radio" name="q20" value="3"><span><b>D.</b> HTML tags</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Manual next() may reach exhaustion.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 21 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which object can be passed to next()?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q21" value="0"><span><b>A.</b> An iterator</span></label><label class="opt"><input type="radio" name="q21" value="1"><span><b>B.</b> Any boolean</span></label><label class="opt"><input type="radio" name="q21" value="2"><span><b>C.</b> A CSS class</span></label><label class="opt"><input type="radio" name="q21" value="3"><span><b>D.</b> Any integer</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> next() expects an iterator-like object.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 22 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What does a for loop internally obtain from an iterable?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q22" value="0"><span><b>A.</b> Decorator</span></label><label class="opt"><input type="radio" name="q22" value="1"><span><b>B.</b> Thread</span></label><label class="opt"><input type="radio" name="q22" value="2"><span><b>C.</b> Database</span></label><label class="opt"><input type="radio" name="q22" value="3"><span><b>D.</b> Iterator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It obtains an iterator and repeatedly requests items.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 23 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which statement is true?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q23" value="0"><span><b>A.</b> Iterable and iterator are always identical</span></label><label class="opt"><input type="radio" name="q23" value="1"><span><b>B.</b> Lists cannot be iterated</span></label><label class="opt"><input type="radio" name="q23" value="2"><span><b>C.</b> An iterable can produce an iterator</span></label><label class="opt"><input type="radio" name="q23" value="3"><span><b>D.</b> Every iterable is already its own iterator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> An iterable supplies an iterator, commonly via iter().</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 24 / 100</span><span class="topic">Iterator</span></div>
+      <h2>In a custom iterator, when data ends you normally:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q24" value="0"><span><b>A.</b> return forever</span></label><label class="opt"><input type="radio" name="q24" value="1"><span><b>B.</b> restart automatically</span></label><label class="opt"><input type="radio" name="q24" value="2"><span><b>C.</b> raise StopIteration</span></label><label class="opt"><input type="radio" name="q24" value="3"><span><b>D.</b> raise KeyError</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> StopIteration signals completion.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 25 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What is output? a=iter([7,8]); next(a); print(next(a))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q25" value="0"><span><b>A.</b> None</span></label><label class="opt"><input type="radio" name="q25" value="1"><span><b>B.</b> 7</span></label><label class="opt"><input type="radio" name="q25" value="2"><span><b>C.</b> 8</span></label><label class="opt"><input type="radio" name="q25" value="3"><span><b>D.</b> Error</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first call consumes 7; the print gets 8.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 26 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which business task fits an iterator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q26" value="0"><span><b>A.</b> CSS animation</span></label><label class="opt"><input type="radio" name="q26" value="1"><span><b>B.</b> HTML heading</span></label><label class="opt"><input type="radio" name="q26" value="2"><span><b>C.</b> Sequential support tickets</span></label><label class="opt"><input type="radio" name="q26" value="3"><span><b>D.</b> Image color selection</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Tickets can be traversed one by one.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 27 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Iterator state is useful because:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q27" value="0"><span><b>A.</b> It installs Python</span></label><label class="opt"><input type="radio" name="q27" value="1"><span><b>B.</b> It creates APIs</span></label><label class="opt"><input type="radio" name="q27" value="2"><span><b>C.</b> It encrypts passwords</span></label><label class="opt"><input type="radio" name="q27" value="3"><span><b>D.</b> It knows where traversal should continue</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> State tracks the next position.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 28 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Can two separate iterators be created from the same list?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q28" value="0"><span><b>A.</b> No</span></label><label class="opt"><input type="radio" name="q28" value="1"><span><b>B.</b> Only if list is empty</span></label><label class="opt"><input type="radio" name="q28" value="2"><span><b>C.</b> Yes</span></label><label class="opt"><input type="radio" name="q28" value="3"><span><b>D.</b> Only once per program</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Each iter(list) call can create an independent iterator.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 29 / 100</span><span class="topic">Iterator</span></div>
+      <h2>If i1=iter([1,2]) and i2=iter([1,2]), next(i1) affects i2?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q29" value="0"><span><b>A.</b> Raises SyntaxError</span></label><label class="opt"><input type="radio" name="q29" value="1"><span><b>B.</b> No, they have separate state</span></label><label class="opt"><input type="radio" name="q29" value="2"><span><b>C.</b> Always</span></label><label class="opt"><input type="radio" name="q29" value="3"><span><b>D.</b> Deletes i2</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Separate iterator objects have separate traversal state.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 30 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which is NOT the purpose of next()?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q30" value="0"><span><b>A.</b> Retrieve next value</span></label><label class="opt"><input type="radio" name="q30" value="1"><span><b>B.</b> Advance traversal</span></label><label class="opt"><input type="radio" name="q30" value="2"><span><b>C.</b> Signal exhaustion through exception</span></label><label class="opt"><input type="radio" name="q30" value="3"><span><b>D.</b> Create a decorator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> next() is unrelated to decorators.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 31 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Which word best summarizes iterator behavior?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q31" value="0"><span><b>A.</b> Compile</span></label><label class="opt"><input type="radio" name="q31" value="1"><span><b>B.</b> Next</span></label><label class="opt"><input type="radio" name="q31" value="2"><span><b>C.</b> Style</span></label><label class="opt"><input type="radio" name="q31" value="3"><span><b>D.</b> Wrap</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Iterator thinking is &#x27;give me the next item&#x27;.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 32 / 100</span><span class="topic">Iterator</span></div>
+      <h2>What does list(iterator) generally do?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q32" value="0"><span><b>A.</b> Consumes remaining iterator items into a list</span></label><label class="opt"><input type="radio" name="q32" value="1"><span><b>B.</b> Changes Python version</span></label><label class="opt"><input type="radio" name="q32" value="2"><span><b>C.</b> Raises error always</span></label><label class="opt"><input type="radio" name="q32" value="3"><span><b>D.</b> Creates a decorator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> list() consumes remaining values.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 33 / 100</span><span class="topic">Iterator</span></div>
+      <h2>After list(it) fully consumes an iterator, list(it) again is usually:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q33" value="0"><span><b>A.</b> The original list</span></label><label class="opt"><input type="radio" name="q33" value="1"><span><b>B.</b> Empty</span></label><label class="opt"><input type="radio" name="q33" value="2"><span><b>C.</b> An integer</span></label><label class="opt"><input type="radio" name="q33" value="3"><span><b>D.</b> SyntaxError</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The iterator remains exhausted.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 34 / 100</span><span class="topic">Iterator</span></div>
+      <h2>Iterator is especially connected to which Python protocol?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q34" value="0"><span><b>A.</b> HTTP protocol only</span></label><label class="opt"><input type="radio" name="q34" value="1"><span><b>B.</b> SQL join protocol</span></label><label class="opt"><input type="radio" name="q34" value="2"><span><b>C.</b> Iteration protocol</span></label><label class="opt"><input type="radio" name="q34" value="3"><span><b>D.</b> CSS protocol</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It implements Python&#x27;s iteration protocol.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 35 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which keyword makes a function a generator function?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q35" value="0"><span><b>A.</b> return only</span></label><label class="opt"><input type="radio" name="q35" value="1"><span><b>B.</b> break</span></label><label class="opt"><input type="radio" name="q35" value="2"><span><b>C.</b> yield</span></label><label class="opt"><input type="radio" name="q35" value="3"><span><b>D.</b> @generator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> yield is the defining keyword.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 36 / 100</span><span class="topic">Generator</span></div>
+      <h2>What does yield do?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q36" value="0"><span><b>A.</b> Produces a value and pauses generator state</span></label><label class="opt"><input type="radio" name="q36" value="1"><span><b>B.</b> Deletes function</span></label><label class="opt"><input type="radio" name="q36" value="2"><span><b>C.</b> Imports a module</span></label><label class="opt"><input type="radio" name="q36" value="3"><span><b>D.</b> Ends program permanently</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> yield emits a value and suspends execution.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 37 / 100</span><span class="topic">Generator</span></div>
+      <h2>When a generator resumes, it continues:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q37" value="0"><span><b>A.</b> From the saved yield position</span></label><label class="opt"><input type="radio" name="q37" value="1"><span><b>B.</b> From the beginning always</span></label><label class="opt"><input type="radio" name="q37" value="2"><span><b>C.</b> From another file</span></label><label class="opt"><input type="radio" name="q37" value="3"><span><b>D.</b> From __init__</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generator state is preserved between yields.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 38 / 100</span><span class="topic">Generator</span></div>
+      <h2>Calling a generator function initially returns:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q38" value="0"><span><b>A.</b> All values immediately</span></label><label class="opt"><input type="radio" name="q38" value="1"><span><b>B.</b> Only None</span></label><label class="opt"><input type="radio" name="q38" value="2"><span><b>C.</b> A generator object</span></label><label class="opt"><input type="radio" name="q38" value="3"><span><b>D.</b> A decorator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The body is consumed through the generator object.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 39 / 100</span><span class="topic">Generator</span></div>
+      <h2>A generator object is also:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q39" value="0"><span><b>A.</b> A CSS object</span></label><label class="opt"><input type="radio" name="q39" value="1"><span><b>B.</b> An iterator</span></label><label class="opt"><input type="radio" name="q39" value="2"><span><b>C.</b> A class decorator only</span></label><label class="opt"><input type="radio" name="q39" value="3"><span><b>D.</b> A database table</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators implement the iterator protocol.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 40 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which is a major generator benefit?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q40" value="0"><span><b>A.</b> Cannot loop</span></label><label class="opt"><input type="radio" name="q40" value="1"><span><b>B.</b> Always creates a full list</span></label><label class="opt"><input type="radio" name="q40" value="2"><span><b>C.</b> Requires more memory by definition</span></label><label class="opt"><input type="radio" name="q40" value="3"><span><b>D.</b> Lazy/on-demand value production</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators can produce values only when requested.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 41 / 100</span><span class="topic">Generator</span></div>
+      <h2>What happens after a generator is fully exhausted?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q41" value="0"><span><b>A.</b> It becomes a list</span></label><label class="opt"><input type="radio" name="q41" value="1"><span><b>B.</b> Further next() raises StopIteration</span></label><label class="opt"><input type="radio" name="q41" value="2"><span><b>C.</b> It automatically restarts</span></label><label class="opt"><input type="radio" name="q41" value="3"><span><b>D.</b> It returns first value forever</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Exhausted generators do not automatically restart.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 42 / 100</span><span class="topic">Generator</span></div>
+      <h2>How do you get a fresh exhausted generator again?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q42" value="0"><span><b>A.</b> Use @wraps</span></label><label class="opt"><input type="radio" name="q42" value="1"><span><b>B.</b> Use same object forever</span></label><label class="opt"><input type="radio" name="q42" value="2"><span><b>C.</b> Call the generator function again</span></label><label class="opt"><input type="radio" name="q42" value="3"><span><b>D.</b> Use del Python</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A new function call creates a fresh generator.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 43 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which is better suited to streaming a huge sequence?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q43" value="0"><span><b>A.</b> CSS</span></label><label class="opt"><input type="radio" name="q43" value="1"><span><b>B.</b> A giant prebuilt list in every case</span></label><label class="opt"><input type="radio" name="q43" value="2"><span><b>C.</b> Decorator</span></label><label class="opt"><input type="radio" name="q43" value="3"><span><b>D.</b> Generator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators are designed for lazy sequential production.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 44 / 100</span><span class="topic">Generator</span></div>
+      <h2>What is output? def g(): yield 4; x=g(); print(next(x))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q44" value="0"><span><b>A.</b> Error</span></label><label class="opt"><input type="radio" name="q44" value="1"><span><b>B.</b> 4</span></label><label class="opt"><input type="radio" name="q44" value="2"><span><b>C.</b> g</span></label><label class="opt"><input type="radio" name="q44" value="3"><span><b>D.</b> None</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first yield produces 4.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 45 / 100</span><span class="topic">Generator</span></div>
+      <h2>What is output? def g(): yield 1; yield 2; print(list(g()))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q45" value="0"><span><b>A.</b> [2, 1]</span></label><label class="opt"><input type="radio" name="q45" value="1"><span><b>B.</b> [1, 2]</span></label><label class="opt"><input type="radio" name="q45" value="2"><span><b>C.</b> []</span></label><label class="opt"><input type="radio" name="q45" value="3"><span><b>D.</b> 1</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> list consumes both yielded values.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 46 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which statement is true about return vs yield?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q46" value="0"><span><b>A.</b> yield imports data</span></label><label class="opt"><input type="radio" name="q46" value="1"><span><b>B.</b> Both always end function identically</span></label><label class="opt"><input type="radio" name="q46" value="2"><span><b>C.</b> return creates decorator</span></label><label class="opt"><input type="radio" name="q46" value="3"><span><b>D.</b> yield can pause and resume; return finishes that call</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> This is the key behavioral difference.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 47 / 100</span><span class="topic">Generator</span></div>
+      <h2>A generator is useful for server logs because:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q47" value="0"><span><b>A.</b> It needs all logs duplicated</span></label><label class="opt"><input type="radio" name="q47" value="1"><span><b>B.</b> It changes log colors</span></label><label class="opt"><input type="radio" name="q47" value="2"><span><b>C.</b> It creates HTML</span></label><label class="opt"><input type="radio" name="q47" value="3"><span><b>D.</b> Matching lines can be yielded one-by-one</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It supports streaming/filter pipelines.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 48 / 100</span><span class="topic">Generator</span></div>
+      <h2>What does next(generator) do?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q48" value="0"><span><b>A.</b> Adds decorator</span></label><label class="opt"><input type="radio" name="q48" value="1"><span><b>B.</b> Deletes generator</span></label><label class="opt"><input type="radio" name="q48" value="2"><span><b>C.</b> Requests the next yielded value</span></label><label class="opt"><input type="radio" name="q48" value="3"><span><b>D.</b> Creates class</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> next() resumes until the next yield/completion.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 49 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which example is a generator function?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q49" value="0"><span><b>A.</b> class A: pass</span></label><label class="opt"><input type="radio" name="q49" value="1"><span><b>B.</b> def f(): yield 1</span></label><label class="opt"><input type="radio" name="q49" value="2"><span><b>C.</b> def f(): print(1)</span></label><label class="opt"><input type="radio" name="q49" value="3"><span><b>D.</b> x=[1,2]</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A function containing yield is a generator function.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 50 / 100</span><span class="topic">Generator</span></div>
+      <h2>What is a generator expression syntax example?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q50" value="0"><span><b>A.</b> [x*x] only</span></label><label class="opt"><input type="radio" name="q50" value="1"><span><b>B.</b> @x</span></label><label class="opt"><input type="radio" name="q50" value="2"><span><b>C.</b> yield(x) outside function</span></label><label class="opt"><input type="radio" name="q50" value="3"><span><b>D.</b> (x*x for x in range(5))</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Parenthesized comprehension-style syntax creates a generator expression.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 51 / 100</span><span class="topic">Generator</span></div>
+      <h2>Generator values are commonly described as:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q51" value="0"><span><b>A.</b> CSS styled</span></label><label class="opt"><input type="radio" name="q51" value="1"><span><b>B.</b> Decorated</span></label><label class="opt"><input type="radio" name="q51" value="2"><span><b>C.</b> Compiled Java</span></label><label class="opt"><input type="radio" name="q51" value="3"><span><b>D.</b> Lazy</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Lazy means produced as needed.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 52 / 100</span><span class="topic">Generator</span></div>
+      <h2>What is output? g=(x for x in [2,3]); print(next(g))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q52" value="0"><span><b>A.</b> 3</span></label><label class="opt"><input type="radio" name="q52" value="1"><span><b>B.</b> Error</span></label><label class="opt"><input type="radio" name="q52" value="2"><span><b>C.</b> [2,3]</span></label><label class="opt"><input type="radio" name="q52" value="3"><span><b>D.</b> 2</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first generated item is 2.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 53 / 100</span><span class="topic">Generator</span></div>
+      <h2>Can a generator be used in a for loop?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q53" value="0"><span><b>A.</b> Yes</span></label><label class="opt"><input type="radio" name="q53" value="1"><span><b>B.</b> Only if converted to string</span></label><label class="opt"><input type="radio" name="q53" value="2"><span><b>C.</b> Only with Django</span></label><label class="opt"><input type="radio" name="q53" value="3"><span><b>D.</b> No</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators are iterators and work with for.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 54 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which business example best fits generator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q54" value="0"><span><b>A.</b> Yield pending order IDs</span></label><label class="opt"><input type="radio" name="q54" value="1"><span><b>B.</b> Create a PowerPoint theme</span></label><label class="opt"><input type="radio" name="q54" value="2"><span><b>C.</b> Rename Java class</span></label><label class="opt"><input type="radio" name="q54" value="3"><span><b>D.</b> Change page font</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Pending records can be streamed lazily.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 55 / 100</span><span class="topic">Generator</span></div>
+      <h2>If a generator has no more yield values, Python signals:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q55" value="0"><span><b>A.</b> IndentationError always</span></label><label class="opt"><input type="radio" name="q55" value="1"><span><b>B.</b> StopIteration</span></label><label class="opt"><input type="radio" name="q55" value="2"><span><b>C.</b> ImportError</span></label><label class="opt"><input type="radio" name="q55" value="3"><span><b>D.</b> KeyError</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Completion is signaled by StopIteration.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 56 / 100</span><span class="topic">Generator</span></div>
+      <h2>What does &#x27;lazy evaluation&#x27; mean here?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q56" value="0"><span><b>A.</b> Compute values when needed</span></label><label class="opt"><input type="radio" name="q56" value="1"><span><b>B.</b> Only run at midnight</span></label><label class="opt"><input type="radio" name="q56" value="2"><span><b>C.</b> Compute everything twice</span></label><label class="opt"><input type="radio" name="q56" value="3"><span><b>D.</b> Never compute</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Values are produced on demand.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 57 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which is NOT a typical generator advantage?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q57" value="0"><span><b>A.</b> On-demand processing</span></label><label class="opt"><input type="radio" name="q57" value="1"><span><b>B.</b> Potentially lower memory for large sequences</span></label><label class="opt"><input type="radio" name="q57" value="2"><span><b>C.</b> Simple streaming pipelines</span></label><label class="opt"><input type="radio" name="q57" value="3"><span><b>D.</b> Automatically stores every generated value forever</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators do not automatically retain every value.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 58 / 100</span><span class="topic">Generator</span></div>
+      <h2>Can yield appear multiple times in one generator function?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q58" value="0"><span><b>A.</b> No</span></label><label class="opt"><input type="radio" name="q58" value="1"><span><b>B.</b> Only in class</span></label><label class="opt"><input type="radio" name="q58" value="2"><span><b>C.</b> Only once in Python</span></label><label class="opt"><input type="radio" name="q58" value="3"><span><b>D.</b> Yes</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Multiple yield points are valid.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 59 / 100</span><span class="topic">Generator</span></div>
+      <h2>What is output? def g(): yield &#x27;A&#x27;; yield &#x27;B&#x27;; x=g(); next(x); print(next(x))</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q59" value="0"><span><b>A.</b> None</span></label><label class="opt"><input type="radio" name="q59" value="1"><span><b>B.</b> Error</span></label><label class="opt"><input type="radio" name="q59" value="2"><span><b>C.</b> B</span></label><label class="opt"><input type="radio" name="q59" value="3"><span><b>D.</b> A</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The first call consumes A, the second returns B.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 60 / 100</span><span class="topic">Generator</span></div>
+      <h2>What happens at a yield statement?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q60" value="0"><span><b>A.</b> Function becomes decorator</span></label><label class="opt"><input type="radio" name="q60" value="1"><span><b>B.</b> Value is produced and execution suspends</span></label><label class="opt"><input type="radio" name="q60" value="2"><span><b>C.</b> Module installs</span></label><label class="opt"><input type="radio" name="q60" value="3"><span><b>D.</b> Program exits</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Execution pauses with state preserved.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 61 / 100</span><span class="topic">Generator</span></div>
+      <h2>A low-stock generator should ideally yield:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q61" value="0"><span><b>A.</b> CSS classes</span></label><label class="opt"><input type="radio" name="q61" value="1"><span><b>B.</b> Every item twice</span></label><label class="opt"><input type="radio" name="q61" value="2"><span><b>C.</b> Python keywords</span></label><label class="opt"><input type="radio" name="q61" value="3"><span><b>D.</b> Only matching low-stock items</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It can filter and stream matching records.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 62 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which phrase best remembers generator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q62" value="0"><span><b>A.</b> Import → Restart OS</span></label><label class="opt"><input type="radio" name="q62" value="1"><span><b>B.</b> Compile → Delete</span></label><label class="opt"><input type="radio" name="q62" value="2"><span><b>C.</b> Generate → Yield → Pause → Resume</span></label><label class="opt"><input type="radio" name="q62" value="3"><span><b>D.</b> Wrap → Login → CSS</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> This describes generator execution.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 63 / 100</span><span class="topic">Generator</span></div>
+      <h2>Is every generator an iterator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q63" value="0"><span><b>A.</b> No</span></label><label class="opt"><input type="radio" name="q63" value="1"><span><b>B.</b> Only after list()</span></label><label class="opt"><input type="radio" name="q63" value="2"><span><b>C.</b> Yes</span></label><label class="opt"><input type="radio" name="q63" value="3"><span><b>D.</b> Only on Windows</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generator objects implement iteration.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 64 / 100</span><span class="topic">Generator</span></div>
+      <h2>Is every iterator necessarily created with yield?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q64" value="0"><span><b>A.</b> No</span></label><label class="opt"><input type="radio" name="q64" value="1"><span><b>B.</b> Yes</span></label><label class="opt"><input type="radio" name="q64" value="2"><span><b>C.</b> Only lists</span></label><label class="opt"><input type="radio" name="q64" value="3"><span><b>D.</b> Only in Python 2</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Custom iterator classes can implement the protocol without yield.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 65 / 100</span><span class="topic">Generator</span></div>
+      <h2>If g is exhausted, what does list(g) normally return?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q65" value="0"><span><b>A.</b> SyntaxError</span></label><label class="opt"><input type="radio" name="q65" value="1"><span><b>B.</b> []</span></label><label class="opt"><input type="radio" name="q65" value="2"><span><b>C.</b> None</span></label><label class="opt"><input type="radio" name="q65" value="3"><span><b>D.</b> Original values again</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> There are no remaining items.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 66 / 100</span><span class="topic">Generator</span></div>
+      <h2>Why might a generator suit invoice IDs?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q66" value="0"><span><b>A.</b> It changes database vendor</span></label><label class="opt"><input type="radio" name="q66" value="1"><span><b>B.</b> It makes invoices colorful</span></label><label class="opt"><input type="radio" name="q66" value="2"><span><b>C.</b> IDs can be produced sequentially as needed</span></label><label class="opt"><input type="radio" name="q66" value="3"><span><b>D.</b> It prevents all exceptions</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Sequential on-demand generation is a natural fit.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 67 / 100</span><span class="topic">Generator</span></div>
+      <h2>Which concept is most directly about value flow on demand?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q67" value="0"><span><b>A.</b> Decorator</span></label><label class="opt"><input type="radio" name="q67" value="1"><span><b>B.</b> Inheritance only</span></label><label class="opt"><input type="radio" name="q67" value="2"><span><b>C.</b> Generator</span></label><label class="opt"><input type="radio" name="q67" value="3"><span><b>D.</b> CSS</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Generators focus on lazy value production.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 68 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What is the main purpose of a decorator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q68" value="0"><span><b>A.</b> Replace Python syntax</span></label><label class="opt"><input type="radio" name="q68" value="1"><span><b>B.</b> Generate list values</span></label><label class="opt"><input type="radio" name="q68" value="2"><span><b>C.</b> Create database only</span></label><label class="opt"><input type="radio" name="q68" value="3"><span><b>D.</b> Add reusable behavior around a function</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Decorators wrap callable behavior.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 69 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which syntax applies a decorator named logger?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q69" value="0"><span><b>A.</b> @logger</span></label><label class="opt"><input type="radio" name="q69" value="1"><span><b>B.</b> decorator(logger) only</span></label><label class="opt"><input type="radio" name="q69" value="2"><span><b>C.</b> #logger</span></label><label class="opt"><input type="radio" name="q69" value="3"><span><b>D.</b> yield logger</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> @logger is decorator syntax.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 70 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Conceptually, @logger above f means:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q70" value="0"><span><b>A.</b> logger = f(logger)</span></label><label class="opt"><input type="radio" name="q70" value="1"><span><b>B.</b> f = logger(f)</span></label><label class="opt"><input type="radio" name="q70" value="2"><span><b>C.</b> yield f</span></label><label class="opt"><input type="radio" name="q70" value="3"><span><b>D.</b> f = iter(logger)</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Decorator syntax passes f to logger and rebinds f to the result.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 71 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What function commonly lives inside a simple decorator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q71" value="0"><span><b>A.</b> main class only</span></label><label class="opt"><input type="radio" name="q71" value="1"><span><b>B.</b> yield only</span></label><label class="opt"><input type="radio" name="q71" value="2"><span><b>C.</b> iterator list</span></label><label class="opt"><input type="radio" name="q71" value="3"><span><b>D.</b> wrapper</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A wrapper typically surrounds the original call.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 72 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Why use *args and **kwargs in a wrapper?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q72" value="0"><span><b>A.</b> Make CSS responsive</span></label><label class="opt"><input type="radio" name="q72" value="1"><span><b>B.</b> Stop all errors</span></label><label class="opt"><input type="radio" name="q72" value="2"><span><b>C.</b> Support different function arguments</span></label><label class="opt"><input type="radio" name="q72" value="3"><span><b>D.</b> Create generator automatically</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> They let the wrapper forward arbitrary arguments.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 73 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What should wrapper do if original function returns an important result?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q73" value="0"><span><b>A.</b> Convert it to decorator</span></label><label class="opt"><input type="radio" name="q73" value="1"><span><b>B.</b> Raise StopIteration</span></label><label class="opt"><input type="radio" name="q73" value="2"><span><b>C.</b> Return func(...) result</span></label><label class="opt"><input type="radio" name="q73" value="3"><span><b>D.</b> Ignore it always</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Otherwise callers may receive None.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 74 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which decorator use case is common?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q74" value="0"><span><b>A.</b> Installing OS</span></label><label class="opt"><input type="radio" name="q74" value="1"><span><b>B.</b> Logging</span></label><label class="opt"><input type="radio" name="q74" value="2"><span><b>C.</b> Writing HTML CSS only</span></label><label class="opt"><input type="radio" name="q74" value="3"><span><b>D.</b> Changing monitor brightness</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Logging is a classic cross-cutting behavior.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 75 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which is another decorator use case?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q75" value="0"><span><b>A.</b> Changing Python logo</span></label><label class="opt"><input type="radio" name="q75" value="1"><span><b>B.</b> Authentication check</span></label><label class="opt"><input type="radio" name="q75" value="2"><span><b>C.</b> Sorting CSS</span></label><label class="opt"><input type="radio" name="q75" value="3"><span><b>D.</b> Creating hardware</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Authentication can be wrapped around protected functions.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 76 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What does @wraps from functools help preserve?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q76" value="0"><span><b>A.</b> Generator values forever</span></label><label class="opt"><input type="radio" name="q76" value="1"><span><b>B.</b> CPU cache</span></label><label class="opt"><input type="radio" name="q76" value="2"><span><b>C.</b> Database rows</span></label><label class="opt"><input type="radio" name="q76" value="3"><span><b>D.</b> Original function metadata</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> functools.wraps preserves metadata such as name/docstring.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 77 / 100</span><span class="topic">Decorator</span></div>
+      <h2>If wrapper calls func() without required arguments, likely result?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q77" value="0"><span><b>A.</b> StopIteration always</span></label><label class="opt"><input type="radio" name="q77" value="1"><span><b>B.</b> CSS error</span></label><label class="opt"><input type="radio" name="q77" value="2"><span><b>C.</b> No issue ever</span></label><label class="opt"><input type="radio" name="q77" value="3"><span><b>D.</b> TypeError</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Required positional arguments are missing.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 78 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Decorator can run code:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q78" value="0"><span><b>A.</b> Only after Python closes</span></label><label class="opt"><input type="radio" name="q78" value="1"><span><b>B.</b> Only inside list</span></label><label class="opt"><input type="radio" name="q78" value="2"><span><b>C.</b> Never before function</span></label><label class="opt"><input type="radio" name="q78" value="3"><span><b>D.</b> Before and/or after original function</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Wrappers can surround the original call.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 79 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which phrase best summarizes decorator?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q79" value="0"><span><b>A.</b> Wrap function to add behavior</span></label><label class="opt"><input type="radio" name="q79" value="1"><span><b>B.</b> Build full list</span></label><label class="opt"><input type="radio" name="q79" value="2"><span><b>C.</b> Give next value</span></label><label class="opt"><input type="radio" name="q79" value="3"><span><b>D.</b> Create tuple</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Wrapping reusable behavior is the central idea.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 80 / 100</span><span class="topic">Decorator</span></div>
+      <h2>A timer decorator is used to:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q80" value="0"><span><b>A.</b> Iterate a tuple</span></label><label class="opt"><input type="radio" name="q80" value="1"><span><b>B.</b> Measure execution duration</span></label><label class="opt"><input type="radio" name="q80" value="2"><span><b>C.</b> Change function name only</span></label><label class="opt"><input type="radio" name="q80" value="3"><span><b>D.</b> Generate employee IDs</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It records start/end time around a call.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 81 / 100</span><span class="topic">Decorator</span></div>
+      <h2>A validation decorator can:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q81" value="0"><span><b>A.</b> Create HTML page</span></label><label class="opt"><input type="radio" name="q81" value="1"><span><b>B.</b> Check input before business function</span></label><label class="opt"><input type="radio" name="q81" value="2"><span><b>C.</b> Compile Java</span></label><label class="opt"><input type="radio" name="q81" value="3"><span><b>D.</b> Yield every file line automatically</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Validation can be separated from core business logic.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 82 / 100</span><span class="topic">Decorator</span></div>
+      <h2>A login_required decorator can:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q82" value="0"><span><b>A.</b> Check access before dashboard runs</span></label><label class="opt"><input type="radio" name="q82" value="1"><span><b>B.</b> Turn list into tuple</span></label><label class="opt"><input type="radio" name="q82" value="2"><span><b>C.</b> Generate passwords automatically</span></label><label class="opt"><input type="radio" name="q82" value="3"><span><b>D.</b> Restart server</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It gates the protected function.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 83 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What is a benefit of decorators?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q83" value="0"><span><b>A.</b> Reduce repeated cross-cutting code</span></label><label class="opt"><input type="radio" name="q83" value="1"><span><b>B.</b> Replace every function</span></label><label class="opt"><input type="radio" name="q83" value="2"><span><b>C.</b> Always make code shorter regardless of design</span></label><label class="opt"><input type="radio" name="q83" value="3"><span><b>D.</b> Store all data in RAM</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Reusable wrappers can reduce duplicated concerns.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 84 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What is output idea for logger wrapper?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q84" value="0"><span><b>A.</b> Generator StopIteration</span></label><label class="opt"><input type="radio" name="q84" value="1"><span><b>B.</b> Nothing necessarily</span></label><label class="opt"><input type="radio" name="q84" value="2"><span><b>C.</b> Before → original → After</span></label><label class="opt"><input type="radio" name="q84" value="3"><span><b>D.</b> Only After</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A typical logger surrounds the original function.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 85 / 100</span><span class="topic">Decorator</span></div>
+      <h2>If decorator returns wrapper, decorated name points to:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q85" value="0"><span><b>A.</b> Generator only</span></label><label class="opt"><input type="radio" name="q85" value="1"><span><b>B.</b> None always</span></label><label class="opt"><input type="radio" name="q85" value="2"><span><b>C.</b> Returned wrapper callable</span></label><label class="opt"><input type="radio" name="q85" value="3"><span><b>D.</b> A list always</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The decorated name is rebound to the returned callable.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 86 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Functions can be decorated because Python functions are:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q86" value="0"><span><b>A.</b> Only strings</span></label><label class="opt"><input type="radio" name="q86" value="1"><span><b>B.</b> CSS nodes</span></label><label class="opt"><input type="radio" name="q86" value="2"><span><b>C.</b> Objects/callables that can be passed around</span></label><label class="opt"><input type="radio" name="q86" value="3"><span><b>D.</b> Only integers</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Functions are first-class objects.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 87 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which import is used for wraps?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q87" value="0"><span><b>A.</b> from math import wraps</span></label><label class="opt"><input type="radio" name="q87" value="1"><span><b>B.</b> from functools import wraps</span></label><label class="opt"><input type="radio" name="q87" value="2"><span><b>C.</b> from os import yield</span></label><label class="opt"><input type="radio" name="q87" value="3"><span><b>D.</b> import iterator.wraps</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> wraps belongs to functools.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 88 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What bug causes a decorated result to become None?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q88" value="0"><span><b>A.</b> Using print</span></label><label class="opt"><input type="radio" name="q88" value="1"><span><b>B.</b> Calling function</span></label><label class="opt"><input type="radio" name="q88" value="2"><span><b>C.</b> Using @ syntax</span></label><label class="opt"><input type="radio" name="q88" value="3"><span><b>D.</b> Wrapper forgets to return original result</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Without return, wrapper implicitly returns None.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 89 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Can one decorator be reused on multiple functions?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q89" value="0"><span><b>A.</b> Only generators</span></label><label class="opt"><input type="radio" name="q89" value="1"><span><b>B.</b> Only once</span></label><label class="opt"><input type="radio" name="q89" value="2"><span><b>C.</b> Yes</span></label><label class="opt"><input type="radio" name="q89" value="3"><span><b>D.</b> No</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Reusability is a key benefit.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 90 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which is cross-cutting behavior?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q90" value="0"><span><b>A.</b> A single local variable</span></label><label class="opt"><input type="radio" name="q90" value="1"><span><b>B.</b> Logging applied to many business functions</span></label><label class="opt"><input type="radio" name="q90" value="2"><span><b>C.</b> A list element</span></label><label class="opt"><input type="radio" name="q90" value="3"><span><b>D.</b> One order&#x27;s price formula only</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Cross-cutting concerns span multiple functions/features.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 91 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What does wrapper(*args, **kwargs) commonly call?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q91" value="0"><span><b>A.</b> iter(kwargs) only</span></label><label class="opt"><input type="radio" name="q91" value="1"><span><b>B.</b> func(*args, **kwargs)</span></label><label class="opt"><input type="radio" name="q91" value="2"><span><b>C.</b> yield wrapper only</span></label><label class="opt"><input type="radio" name="q91" value="3"><span><b>D.</b> next(func) always</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Arguments are forwarded to the original function.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 92 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which concept best suits role/permission checks?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q92" value="0"><span><b>A.</b> Iterator only</span></label><label class="opt"><input type="radio" name="q92" value="1"><span><b>B.</b> Tuple only</span></label><label class="opt"><input type="radio" name="q92" value="2"><span><b>C.</b> Generator only</span></label><label class="opt"><input type="radio" name="q92" value="3"><span><b>D.</b> Decorator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> Authorization is commonly implemented as wrapping behavior.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 93 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Decorator primarily changes:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q93" value="0"><span><b>A.</b> All yielded values automatically</span></label><label class="opt"><input type="radio" name="q93" value="1"><span><b>B.</b> The Python language version</span></label><label class="opt"><input type="radio" name="q93" value="2"><span><b>C.</b> How/when a callable is surrounded with extra behavior</span></label><label class="opt"><input type="radio" name="q93" value="3"><span><b>D.</b> The user&#x27;s monitor</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> It augments callable behavior.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 94 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What should a well-designed reusable decorator avoid?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q94" value="0"><span><b>A.</b> Unnecessary duplication</span></label><label class="opt"><input type="radio" name="q94" value="1"><span><b>B.</b> Returning wrapper</span></label><label class="opt"><input type="radio" name="q94" value="2"><span><b>C.</b> Accepting a function</span></label><label class="opt"><input type="radio" name="q94" value="3"><span><b>D.</b> Calling original function</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The purpose is often to centralize repeated behavior.</div>
+    </section><section class="qcard" data-answer="0">
+      <div class="qtop"><span class="num">Question 95 / 100</span><span class="topic">Decorator</span></div>
+      <h2>What happens first in @audit def pay... at definition time conceptually?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q95" value="0"><span><b>A.</b> pay is passed to audit</span></label><label class="opt"><input type="radio" name="q95" value="1"><span><b>B.</b> StopIteration occurs</span></label><label class="opt"><input type="radio" name="q95" value="2"><span><b>C.</b> yield runs</span></label><label class="opt"><input type="radio" name="q95" value="3"><span><b>D.</b> pay is executed as payment immediately</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> The decorator is applied to the function object.</div>
+    </section><section class="qcard" data-answer="1">
+      <div class="qtop"><span class="num">Question 96 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which example is decorator syntax?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q96" value="0"><span><b>A.</b> iter(pay)</span></label><label class="opt"><input type="radio" name="q96" value="1"><span><b>B.</b> @audit
+def pay(): pass</span></label><label class="opt"><input type="radio" name="q96" value="2"><span><b>C.</b> yield pay</span></label><label class="opt"><input type="radio" name="q96" value="3"><span><b>D.</b> next(pay)</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> @audit directly decorates pay.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 97 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Generator and decorator differ because:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q97" value="0"><span><b>A.</b> Both only style HTML</span></label><label class="opt"><input type="radio" name="q97" value="1"><span><b>B.</b> Decorator always uses yield</span></label><label class="opt"><input type="radio" name="q97" value="2"><span><b>C.</b> They are exactly identical</span></label><label class="opt"><input type="radio" name="q97" value="3"><span><b>D.</b> Generator produces values; decorator wraps behavior</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> They solve different problems.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 98 / 100</span><span class="topic">Decorator</span></div>
+      <h2>If you need function execution logging across 20 functions, choose:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q98" value="0"><span><b>A.</b> 20 copied logging blocks if avoidable</span></label><label class="opt"><input type="radio" name="q98" value="1"><span><b>B.</b> Tuple iterator</span></label><label class="opt"><input type="radio" name="q98" value="2"><span><b>C.</b> Generator expression</span></label><label class="opt"><input type="radio" name="q98" value="3"><span><b>D.</b> Reusable decorator</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> A decorator centralizes repeated logging behavior.</div>
+    </section><section class="qcard" data-answer="2">
+      <div class="qtop"><span class="num">Question 99 / 100</span><span class="topic">Decorator</span></div>
+      <h2>If you need pending records one-by-one, choose primarily:</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q99" value="0"><span><b>A.</b> Authentication decorator</span></label><label class="opt"><input type="radio" name="q99" value="1"><span><b>B.</b> Logging decorator</span></label><label class="opt"><input type="radio" name="q99" value="2"><span><b>C.</b> Generator</span></label><label class="opt"><input type="radio" name="q99" value="3"><span><b>D.</b> CSS wrapper</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> This is a lazy value-flow problem.</div>
+    </section><section class="qcard" data-answer="3">
+      <div class="qtop"><span class="num">Question 100 / 100</span><span class="topic">Decorator</span></div>
+      <h2>Which final statement is correct?</h2>
+      <div class="options"><label class="opt"><input type="radio" name="q100" value="0"><span><b>A.</b> Decorator creates iterator automatically</span></label><label class="opt"><input type="radio" name="q100" value="1"><span><b>B.</b> All three are the same</span></label><label class="opt"><input type="radio" name="q100" value="2"><span><b>C.</b> yield is decorator syntax</span></label><label class="opt"><input type="radio" name="q100" value="3"><span><b>D.</b> Iterator = next-item traversal; Generator = lazy yield; Decorator = reusable wrapper behavior</span></label></div>
+      <div class="feedback"></div>
+      <div class="explain"><b>Explanation:</b> This summarizes the three concepts.</div>
+    </section>
+<section class="result" id="result"><div class="pill">Test Complete</div><h1>Your Score</h1><div class="score" id="score"></div><div class="breakdown"><div class="box"><b>Iterator</b><div id="si"></div></div><div class="box"><b>Generator</b><div id="sg"></div></div><div class="box"><b>Decorator</b><div id="sd"></div></div></div><p id="msg"></p><button onclick="location.reload()">Restart Test</button></section>
+</main>
+<footer id="nav" style="display:none"><button id="prev" onclick="move(-1)">← Previous</button><button onclick="check()">Check Answer</button><button class="primary" id="next" onclick="move(1)">Next →</button></footer>
+<script>
+const qs=[...document.querySelectorAll('.qcard')]; let cur=0;
+function start(){document.getElementById('intro').style.display='none';document.getElementById('nav').style.display='flex';show(0)}
+function show(n){cur=Math.max(0,Math.min(99,n));qs.forEach((q,i)=>q.classList.toggle('active',i===cur));document.getElementById('headCount').textContent=(cur+1)+' / 100';document.getElementById('bar').style.width=(cur+1)+'%';document.getElementById('prev').disabled=cur===0;document.getElementById('next').textContent=cur===99?'Finish Test':'Next →';window.scrollTo(0,0)}
+function check(){const q=qs[cur], picked=q.querySelector('input:checked'), fb=q.querySelector('.feedback'), ex=q.querySelector('.explain');if(!picked){fb.textContent='Select an option first.';fb.className='feedback wrong';return}const ok=+picked.value===+q.dataset.answer;fb.textContent=ok?'✓ Correct':'✗ Incorrect — correct answer is '+String.fromCharCode(65,+q.dataset.answer);fb.className='feedback '+(ok?'correct':'wrong');ex.style.display='block'}
+function move(d){if(cur===99&&d===1){finish();return}show(cur+d)}
+function finish(){let total=0,a=[0,0,0],max=[34,33,33];qs.forEach((q,i)=>{const x=q.querySelector('input:checked');if(x&&+x.value===+q.dataset.answer){total++;a[i<34?0:i<67?1:2]++}});qs.forEach(q=>q.classList.remove('active'));document.getElementById('nav').style.display='none';document.getElementById('result').style.display='block';document.getElementById('score').textContent=total+' / 100';document.getElementById('si').textContent=a[0]+' / '+max[0];document.getElementById('sg').textContent=a[1]+' / '+max[1];document.getElementById('sd').textContent=a[2]+' / '+max[2];document.getElementById('msg').textContent=total>=80?'Excellent understanding.':total>=60?'Good — review incorrect concepts once.':'Review the concepts and try again.';document.getElementById('headCount').textContent='Completed';document.getElementById('bar').style.width='100%'}
+</script></body></html>
